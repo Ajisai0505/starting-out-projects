@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    box-sizing: border-box;  /* prevents overflow of contents from its container */
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    align-items: center;                /* cross axis */
+    justify-content: center;            /* main axis */
+    height: 100vh;                      /*  ensures the parent container is taking up the full viewport height */
+}
+
+.container{
+    display: flex;
+    width: 90vw;
+}
+
+.panel{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 50px;
+    height: 85vh;
+    margin:5px;
+    flex: 0.5;
+    transition: all 0.25s ease-in;
+}
+
+.panel h3{
+    position: absolute; 
+    top: 480px;
+    left: 20px ;
+    opacity: 0;
+
+} 
+
+.active{
+    flex: 5;
+}
+
+.active h3{
+    opacity: 100;
+}
+
+
+@media(any-hover: hover){
+    .passive:hover{
+     outline: 2px solid rgb(207, 205, 205);
+        }
+}
+
+@media(max-width: 600px){
+    .container{
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(3), .panel:nth-of-type(4){
+        display: none;
+    }
+}
+
+@media(max-width: 400px){
+    .panel{
+        flex: 0;
+    }
+
+    .active{
+        flex: 1;
+    }
+}
