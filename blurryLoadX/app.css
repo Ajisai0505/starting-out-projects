@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    box-sizing: border-box;  /* prevents overflow of contents from its container */
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    align-items: center;                /* cross axis */
+    justify-content: center;            /* main axis */
+    height: 100vh;                      /*  ensures the parent container is taking up the full viewport height */
+    
+}
+
+.bg{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url('https://plus.unsplash.com/premium_photo-1724691156679-5e42bb8ead52?q=80&w=1434&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;             /* ensures the image covers the entire area */
+    background-repeat: no-repeat;       /* prevents repetition */
+    background-position: center;        /* centers the image */
+    z-index: -1;
+    filter: blur(30px);
+    
+    
+}
+
+.loadText{
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 5px white;
+    opacity: 1;
+}
