@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./app.css">
+    <title>Project Head</title>
+</head>
+<body>
+<div class="mainDiv">
+<div class="option">
+<span>Options</span>
+        <button class="btn" id="seeRules">Rules</button>
+        <button class="btn" id="setIntervalBTN">Set Click Range</button>
+</div>  <!-- end of options -->
+
+<div class="ruleContainer hidden" id="ruleContainer">
+    <h4>Rules</h4>
+    <div class="ruleText">
+    <p>Hi there! Thanks for visiting this not so exciting game. So this is how you play this. To start to game, simply click the play button. Once you click it, the bar will be filled partially. Keep on clicking the play button until the bar is fully filled. Press the reset button to start fresh. Good luck!</p>
+    </div>
+</div>
+
+<div class="intervalInput disappear" id="intervalInput">
+    <input type="range" id="rangeInput" min="1" max="100" value="10">
+    <button class="miniButton" id="rangeClose">&#10006</button>
+</div>
+
+<div class="container">  
+    
+    <h1>Reach 100</h1>
+    <div class="barContainer container">    
+        <div class="markerContainer container">
+            <div class="marker" id="marker1">1%</div>
+            <div class="marker" id="marker2">25%</div>
+            <div class="marker" id="marker3">50%</div>
+            <div class="marker" id="marker4">75%</div>
+            <div class="marker" id="marker5">100%</div>
+        </div>  
+        <div class="progressContainer container">
+            <div class="progress" id="progress"></div>      <!-- line display -->
+        </div>
+    </div><!--barContainer Closing  -->
+    <div class="buttonContainer">
+        <button class="btn" id="reset" disabled>Reset</button>
+        <button class="btn" id="play">Play</button>    
+    </div> 
+</div> <!-- container end -->
+
+
+<div class="resultContainer">
+    <h3>See Result Here</h3>
+    <p>Tries: </span><span id="tries">You've made no tries yet.</p>
+    <p id="feedback">Click Play to start.<p>
+    <p id="rangePar">Max Point of 1 Click:  <span id="rangeSpan"></span></p>
+    <p id="currentClick">Point:  <span id="currentClickSpan"></span></p>
+</div>
+</div><!-- mainDiv -->
+
+<script src="./script.js"></script>
+</body>
+</html>

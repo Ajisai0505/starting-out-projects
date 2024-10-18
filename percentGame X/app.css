@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    box-sizing: border-box;  /* prevents overflow of contents from its container */
+}
+
+
+:root{
+    --progress-low: rgb(199, 43, 16);
+    --progress-mid: rgb(233, 191, 55);
+    --progress-almost: hsl(106, 89%, 63%);
+    --progress-empty: rgb(216, 210, 210);
+    --progress-reached:  rgb(52, 172, 16);
+    --container--background:  rgb(73, 224, 230);
+
+}
+
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;                /* cross axis */
+    justify-content: center;            /* main axis */
+    height: 100vh;                      /*  ensures the parent container is taking up the full viewport height */
+}
+
+
+
+.mainDiv{
+    display: flex;
+    justify-content: space-around;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    align-items: center;
+
+}
+
+
+.barContainer{
+    display: flex;
+    height: 500px;
+    transform: translateX(-16.5px);
+}
+
+.progressContainer{
+    display: flex;
+    flex-direction: column-reverse;
+    height: 100%;
+    width: 100px;
+    border: 1px solid;
+}
+
+.markerContainer{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    margin-right: 5px;
+}
+
+
+.option{
+    height: 50px;
+    width: 250px;
+    position: absolute;
+    background-color: var(--progress-empty);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    padding-right: 10px;
+    top: 0%;
+    left: 0%;
+
+}
+
+.resultContainer{
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    height: 300px;
+    width: 250px;
+    background-color: var(--container--background);
+    padding: 10px;
+    
+}
+
+.buttonContainer{
+    margin-top:20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.marker.active{
+    color: var(--progress-reached)
+}
+
+.btn{
+    padding: 5px;
+    font-size: 15px;
+    height: 40px;
+}
+
+#rangeClose{
+    position: relative;
+    padding: 0;
+    height: 20px;
+    text-align: center;
+    right: -25px;
+}
+
+.ruleContainer{
+ 
+    background-color: var(--progress-empty);
+    height: 300px;
+    width: 250px;  
+    text-align: center;
+}
+
+.ruleText{
+    width: 100%;
+    word-wrap: break-word;
+    padding-left:10px;
+    padding-right: 5px;
+}
+
+.hidden{
+    opacity: 0;
+}
+
+.intervalInput {
+    height: 50px;
+    width: 200px;
+    background-color: var(--progress-empty);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+.disappear{
+    display: none;
+}
+
+
+
