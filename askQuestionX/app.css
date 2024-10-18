@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    box-sizing: border-box;  /* prevents overflow of contents from its container */
+}
+
+body {
+    margin: 0;
+    font-family: "Comic Neue", sans-serif;
+    background-color: rgb(68, 188, 218, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;                /* cross axis */
+   
+}
+
+h1{
+    font-family: "Comic Neue", sans-serif;
+}
+
+.container{
+    font-family: "Comic Neue", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;                /* cross axis */
+    justify-content: center;            /* main axis */  
+    font-size: 20px;
+}
+
+.inquiries{
+    display: flex;
+    flex-direction: column;
+    align-items: center;                
+    justify-content: center;   
+        
+}
+
+.inq{
+    border: solid 5px rgb(68, 188, 218);
+    margin: 20px;
+    width: 600px;
+    height: 100px;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;     
+    background-color: rgb(68, 188, 218, 0.5);   
+
+}
+
+.inq.active{
+    height: 150px;
+    justify-content: space-around;
+    background-color: white;
+}
+
+button{
+    border: none;;
+}
+
+
+button.inqToggle{
+    max-width: 20px;
+    max-height: 20px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 5px;
+    padding-top: 2px;
+    background-color: transparent;
+    font-size: 18px;
+}
+
+.inq button.editBtn{
+ display: none;
+}
+
+.inq.active button.editBtn{
+    background-color: white;
+    border: none;
+    position:absolute;
+    right: 20px;
+    top: 50%;   
+    display: block;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+
+.inq.active{
+    background-color: white;
+}
+
+.inq p{
+    display: none;
+}
+
+
+.inq.active p{
+    display: flex;
+}
+
+.editAnsContainer{
+    position: absolute;
+    top: 50%;
+    height: 100px;
+    width: 400px;
+    z-index: 2;
+    opacity: 1;
+    background-color: white;
+    display: none;
+}
+
+textarea.editAns{
+    height: 100%;
+    width: 100%;
+    font-family: "Comic Neue", sans-serif;
+    letter-spacing: 5px;
+    border: solid 3px rgb(68, 188, 218);
+    border-radius: 5px;
+}
+
+textarea.editAns:focus, 
+textarea.editAns:active {
+    border: solid 3px rgb(68, 188, 218);
+    outline: none;
+}
+
+textarea.editAns.empty{
+    border: solid 2px rgb(243, 12, 12);
+}
+
+.inq.active .editAnsContainer.active{
+    display: block;
+}
+
+.editAnsContainer button.editSubmit{
+    display: inline-block;
+    position: absolute;
+    right: 3px;
+    bottom: 3px;
+    background-color: white;
+    font-weight:900;
+    font-size: 18px;
+    
+}
+
+i.com{
+    color: rgb(235, 61, 90);
+    position: fixed;
+    font-size: 500px;
+}
+
+.comICBody1{
+    
+    left: -50px;
+    top: -120px;
+}
+
+.comICBody2{
+    right: -90px;
+    bottom: -80px;
+    transform: scaleX(-1);
+}
+
