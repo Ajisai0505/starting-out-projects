@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    box-sizing: border-box;  /* prevents overflow of contents from its container */
+}
+
+body {
+    margin: 0;
+    font-family: "Muli", sans-serif;
+    background: linear-gradient(to left top,
+    #ffffff 0%,
+    #ffffff 50%,
+    #22ec54 50%,
+    #22ec54 100%);
+    display: flex;
+    align-items: center;               
+    justify-content: center;            
+    height: 100vh;     
+    width: 100vw;               
+}
+
+
+nav.centerNav{
+    display: flex;
+    align-items: center;               
+    justify-content: center;
+    background-color: rgb(19, 177, 216);
+    padding: 2px 15px;
+    width: 100px;
+    transition: width 0.6s linear;
+    position: relative;
+    
+}
+
+nav.centerNav.active{
+    width: 400px;
+}
+
+nav.centerNav ul {
+    text-decoration: none;
+    color: white;
+    margin: 5px;
+    font-size: 18px; 
+    transform: rotateY(0deg);
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    display: flex;    
+
+}
+
+
+ul.aTags li.liTag a.tags {
+    text-decoration: none;  /* Removes the underline */
+    color: inherit;        /* Inherits the color from its parent */
+    background: none;      /* Ensures no background */
+    margin: 5px;
+    font-size: 18px; 
+    transform: rotateY(0deg);
+    transition: transform 0.6s linear, opacity 0.6s linear;
+}
+nav.centerNav li{
+    transform: rotateY(0deg);
+    margin: 5px;              
+    padding: 0; 
+    opacity: 0;
+    transition: transform 0.6s linear, opacity 0.6s linear;
+}
+
+
+nav.centerNav.active li {
+    opacity: 1;
+    transform: rotateY(360deg);
+    transition: transform 0.6s linear, opacity 0.6s linear;
+}
+
+
+button.icon{
+    height: 30px;
+    width: 30px;
+    margin: auto;
+    padding: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: end;
+    background: none;
+    border: none;
+    position: absolute;
+   right: 50%;
+   transform: translateX(35%);
+   transition: transform 0.6s linear;
+   
+   
+}
+
+nav.centerNav.active button.icon{
+    right: 5%;
+    transition: transform 0.6s linear;
+
+}
+
+button.icon .line{
+    background-color: black;
+    height: 2px;
+    width: 18px;   
+    margin: 0%;
+    transition: transform 0.6s linear;
+}
+
+
+
+nav.centerNav button.icon .line{
+    transform: rotate(0) translateY(0);
+    align-items: center;
+}
+
+nav.centerNav.active button.icon .line.line1{
+    transform: rotate(-765deg) translateY(.000000000001px) translateX(-40%);
+
+}
+
+
+nav.centerNav.active button.icon .line.line2{
+    transform: rotate(765deg) translateY(.000000000001px) translateX(-40%);
+    
+}
+
