@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    box-sizing: border-box;  /* prevents overflow of contents from its container */
+}
+
+body {
+    margin: 0;
+    font-family: "Muli", sans-serif;
+    color: rgb(51, 47, 47);
+    background-color: rgb(66, 166, 248);
+    height: 100vh;
+    width: 100vw;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container{
+    width: 100%;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    
+}
+
+.cup-big{
+    background-color: white;
+    width: 250px;
+    height: 450px;
+    display: flex;
+    flex-direction: column-reverse;
+    border-radius: 0 0 40px 40px;
+    justify-self: center;
+    overflow: hidden; /* Ensures content stays within bounds */
+    box-shadow: 0px 0px 2px white; 
+    
+}
+
+
+
+.remaining{
+    background-color: white;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    text-align: center;
+
+}
+
+.percentage{
+    background-color: rgb(15, 92, 192);
+    /* height: 100%;  */
+    /* height: 0%; */
+    border-radius: inherit;
+    text-align: center;
+   /*  font-size: 1em; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 0;
+    height: 0%;
+    transition: height  0.5s ease;
+}
+
+
+
+.cups-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    
+}
+
+.cup-small{
+    background-color: white;
+    height: 80px;
+    width: 60px;
+    border-radius: 0 0 15px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    box-shadow: 0px 0px 2px white;  
+    
+}
+
+.cup-small:hover{
+    cursor: pointer;
+}
+
+.full{
+    background-color: rgb(15, 92, 192);
+    transition: all 0.5s ease;
+}
+
+
+@media (max-width: 576px) {
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 30px;
+    }
+
+    .cups-container{
+        grid-gap: 10px;
+        justify-self: center;
+    }
+  }
