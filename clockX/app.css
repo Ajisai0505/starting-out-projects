@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    box-sizing: border-box;  /* prevents overflow of contents from its container */
+}
+
+body {
+    margin: 0;
+    font-family: "Muli", sans-serif;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;                /* cross axis */
+    justify-content: center;            /* main axis */
+    height: 100vh;                      /*  ensures the parent container is taking up the full viewport height */
+    width: 100vw;
+}
+
+.container{
+    display: inherit;
+    flex-direction: inherit;
+    align-items:inherit ;                /* cross axis */
+    justify-content: inherit;            /* main axis */
+    height: inherit;                      /*  ensures the parent container is taking up the full viewport height */
+    width: inherit;
+    
+}
+
+.container.dark{
+    background-color: rgb(43, 40, 40);
+}
+
+
+.clock{
+    position: relative;
+    height: 250px;
+    width: 250px;
+    background-color: rgb(70, 115, 238);
+    border-radius: 50%;
+    margin: 30px 0px;
+}
+
+.needle{
+    position:absolute;
+    height: 100px;
+    width: 3px;
+    background-color: rgb(0, 0, 0);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%) rotate(0deg);
+    transform-origin: bottom center;
+}
+
+.needle.hour{
+    height: 50px;
+    width: 5px;
+}
+
+.needle.dark{
+    background-color: white;
+}
+
+
+.needle.second{
+    background-color: red;
+}
+
+.center-point{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    z-index: 5;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.center-point.dark{
+    background-color: white;
+}
+
+span{
+    margin: 10px 0px;
+    font-size: 20px;
+}
+
+span.time{
+    font-size: 60px;
+}
+
+span.dark{
+    color: white;
+}
+
+button.toggler{
+    margin: 30px 0px;
+    background-color: rgb(43, 40, 40);
+    color: white;
+    font-size: 12px;
+    padding: 8px;
+    border-radius: 15px;
+    border: none;
+    font-size: 18px;
+    
+}
+
+button.toggler.dark{
+    background-color: white;
+    color: black;
+}
+
+button:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+}
